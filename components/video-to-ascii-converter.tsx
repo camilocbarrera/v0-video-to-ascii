@@ -19,7 +19,7 @@ export function VideoToAsciiConverter({ videoFile, onReset }: VideoToAsciiConver
   const [isProcessing, setIsProcessing] = useState(false)
   const [progress, setProgress] = useState(0)
   const [width, setWidth] = useState([90])
-  const [fps, setFps] = useState([10])
+  const [fps, setFps] = useState([25])
 
   const videoRef = useRef<HTMLVideoElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -165,8 +165,8 @@ export function VideoToAsciiConverter({ videoFile, onReset }: VideoToAsciiConver
             <Button
               onClick={processVideo}
               disabled={isProcessing}
-              className="btn-terminal bg-transparent"
-              variant="outline"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono tracking-wide px-6 py-2"
+              size="lg"
             >
               {isProcessing ? `Processing ${progress}%` : "Convert to ASCII"}
             </Button>

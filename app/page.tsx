@@ -56,7 +56,7 @@ export default function HomePage() {
               <div className="p-4 md:p-6 space-y-4 md:space-y-6">
                 <TerminalFrame title="">
                   <video
-                    className="w-full max-w-2xl mx-auto"
+                    className="w-full max-w-md mx-auto"
                     autoPlay
                     loop
                     muted
